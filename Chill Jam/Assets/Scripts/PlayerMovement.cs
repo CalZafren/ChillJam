@@ -40,35 +40,37 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = IsGrounded();
 
         if(canMoveVertical){
-            moveDir = new Vector2(moveX, moveY);
+            moveDir = new Vector2(moveX * speed, moveY * speed);
         }else if(isGrounded){
-            moveDir = new Vector2(moveX, 0);
+            moveDir = new Vector2(moveX * speed, 0);
         }else{
-            moveDir = new Vector2(moveX, -9.81f);
+            moveDir = new Vector2(moveX * speed, myRB.velocity.y);
         }
-        //Debug.Log(isGrounded);
     }
 
     void MoveAndAnimatePlayer(){
-        myRB.velocity = moveDir * speed;
+        myRB.velocity = moveDir;
     }
 
 
-    void OnTriggerEnter2D(){
-        canMoveVertical = true;
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.tag == "Ladder"){
+            canMoveVertical = true;
+        }
     }
 
-    void OnTriggerExit2D(){
-        canMoveVertical = false;
+    void OnTriggerExit2D(Collider2D other){
+        if(other.tag == "Ladder"){
+            canMoveVertical = false;
+        }
     }
 
     private bool IsGrounded(){
-        RaycastHit2D hit = Physics2D.BoxCast(myCol.bounds.center, myCol.bounds.size, 0f, Vector2.down, myCol.bounds.extents.y + checkDistance);
+        RaycastHit2D hit = Physics2D.BoxCast(myCol.bounds.center, myCol.bounds.size, 0f, Vector2.down, checkDistance);
         Debug.DrawRay(myCol.bounds.center + new Vector3(myCol.bounds.extents.x, 0), Vector2.down * (myCol.bounds.extents.y + checkDistance), Color.green);
         Debug.DrawRay(myCol.bounds.center - new Vector3(myCol.bounds.extents.x, 0), Vector2.down * (myCol.bounds.extents.y + checkDistance), Color.green);
-        Debug.Log(hit.collider.gameObject);
 
-        if(hit.collider != null){
+        if(hit){
             return true;
         }else{
             return false;
