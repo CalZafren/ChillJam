@@ -25,7 +25,7 @@ public class Switch : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(){
+    void OnTriggerStay2D(){
         spriteRend.material = switchOn;
         target.SetActive(true);
     }
