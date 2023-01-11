@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D myRB;
     private Collider2D myCol;
     private Vector2 moveDir;
+    private Animator anim;
     [SerializeField]
     private int speed;
     private float moveX;
@@ -15,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canMoveVertical = false;
     private bool isGrounded;
     private float checkDistance = .1f;
+    private bool isFacingRight = true;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     void FindComponents(){
         myRB = GetComponent<Rigidbody2D>();
         myCol = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
     }
 
     void CheckForInput(){
@@ -50,6 +53,27 @@ public class PlayerMovement : MonoBehaviour
 
     void MoveAndAnimatePlayer(){
         myRB.velocity = moveDir;
+        if(canMoveVertical){
+            anim.SetBool("onLadder", true);
+        }else{
+            anim.SetBool("onLadder", false);
+        }
+
+        if(Mathf.Abs(myRB.velocity.y) > .01){
+            anim.SetBool("moveY", true);
+        }else{
+            anim.SetBool("moveY", false);
+        }
+
+        if(Mathf.Abs(myRB.velocity.x) > .01){
+            anim.SetBool("moveX", true);
+        }else{
+            anim.SetBool("moveX", false);
+        }
+
+        if((moveX < 0 && isFacingRight) || (moveX > 0 && !isFacingRight)){
+            Flip();
+        }
     }
 
 
@@ -75,5 +99,10 @@ public class PlayerMovement : MonoBehaviour
         }else{
             return false;
         }
+    }
+
+    private void Flip(){
+        transform.Rotate(0, 180, 0);
+        isFacingRight = !isFacingRight;
     }
 }
