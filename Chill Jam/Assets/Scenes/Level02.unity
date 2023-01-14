@@ -6313,6 +6313,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6280269302603244506, guid: be80c9a1b5cf1b742a307456d268b1fd, type: 3}
+      propertyPath: nextScene
+      value: Scene2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6280269302603244511, guid: be80c9a1b5cf1b742a307456d268b1fd, type: 3}
       propertyPath: m_Name
       value: Door

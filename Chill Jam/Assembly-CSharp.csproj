@@ -38,8 +38,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\Switch.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Box.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <None Include="Assets\Fonts\ice-and-snow-font\info.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
