@@ -83,20 +83,14 @@ public class PlayerMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Ladder"){
             canMoveVertical = true;
-<<<<<<< HEAD
-=======
             GetComponent<Rigidbody2D>().gravityScale = 0;
->>>>>>> main
         }
     }
 
     void OnTriggerExit2D(Collider2D other){
         if(other.tag == "Ladder"){
             canMoveVertical = false;
-<<<<<<< HEAD
-=======
             GetComponent<Rigidbody2D>().gravityScale = 1;
->>>>>>> main
         }
     }
 
