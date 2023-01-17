@@ -156,11 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1438339100711256721, guid: f532a8f27df113a44917a2bd59e0c1b7, type: 3}
       propertyPath: m_LocalPosition.z
-<<<<<<< HEAD
       value: 10
-=======
-      value: 10.685445
->>>>>>> main
       objectReference: {fileID: 0}
     - target: {fileID: 1438339100711256721, guid: f532a8f27df113a44917a2bd59e0c1b7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -892,8 +888,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
->>>>>>> main
 --- !u!1001 &370909648
 PrefabInstance:
   m_ObjectHideFlags: 0
