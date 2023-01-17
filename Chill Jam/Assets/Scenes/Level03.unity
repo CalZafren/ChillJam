@@ -1714,7 +1714,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
   m_Children: []
   m_Father: {fileID: 1780283049}
   m_RootOrder: 18
