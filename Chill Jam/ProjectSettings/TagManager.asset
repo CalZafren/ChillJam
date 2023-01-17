@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ladder
+<<<<<<< HEAD
+=======
+  - Music
+>>>>>>> main
   layers:
   - Default
   - TransparentFX

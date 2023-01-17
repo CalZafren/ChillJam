@@ -36,11 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <None Include="Assets\Fonts\ice-and-snow-font\info.txt" />
+     <Compile Include="Assets\Scripts\Platforms.cs" />
+     <Compile Include="Assets\Scripts\Audio.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\Switch.cs" />
      <Compile Include="Assets\Scripts\Box.cs" />
+     <Compile Include="Assets\audio.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <None Include="Assets\Fonts\ice-and-snow-font\info.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
