@@ -12,7 +12,7 @@ public class Door : MonoBehaviour
 
 public class Door : MonoBehaviour
 {
->>>>>>> main
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,14 +26,12 @@ public class Door : MonoBehaviour
     }
 
     void OnTriggerEnter2D(){
-<<<<<<< HEAD
+
         ChangeScene(nextScene);
     }
 
     public void ChangeScene(string scene){
         SceneManager.LoadScene(scene);
-=======
-        Debug.Log("Congrats you win the game");
->>>>>>> main
+
     }
 }
