@@ -1,17 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< HEAD
 using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
     [SerializeField]
     private string nextScene;
-=======
-
-public class Door : MonoBehaviour
-{
 
     // Start is called before the first frame update
     void Start()
