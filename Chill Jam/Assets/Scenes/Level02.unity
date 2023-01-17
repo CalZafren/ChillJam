@@ -5839,17 +5839,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5193008325759798520, guid: c5059819a848bfe4ab3d5a075860383c, type: 3}
-      propertyPath: m_Name
-      value: Character (1)
-      objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 5193008325759798521, guid: c5059819a848bfe4ab3d5a075860383c, type: 3}
       propertyPath: speed
       value: 3
       objectReference: {fileID: 0}
->>>>>>> main
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5059819a848bfe4ab3d5a075860383c, type: 3}
 --- !u!1 &1834695763
@@ -6320,16 +6313,9 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 6280269302603244506, guid: be80c9a1b5cf1b742a307456d268b1fd, type: 3}
       propertyPath: nextScene
       value: Scene2.5
-      objectReference: {fileID: 0}
-=======
->>>>>>> main
-    - target: {fileID: 6280269302603244511, guid: be80c9a1b5cf1b742a307456d268b1fd, type: 3}
-      propertyPath: m_Name
-      value: Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be80c9a1b5cf1b742a307456d268b1fd, type: 3}
